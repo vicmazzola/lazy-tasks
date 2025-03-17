@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">LazyTasks</string>
+
+    <!-- Screen Titles -->
+    <string name="task_list_title">My Task List</string>
+
+    <!-- Labels -->
+    <string name="task_category_label">Task Category</string>
+
+    <!-- Search Icon Description -->
+    <string name="search_icon_description">Search</string>
+
+    <!-- Task Titles -->
+    <string name="task_buy_groceries">Buy groceries</string>
+    <string name="task_finish_project">Finish Kotlin project</string>
+    <string name="task_workout">Workout for 30 minutes</string>
+    <string name="task_call_mom">Call mom</string>
+    <string name="task_read_book">Read a book</string>
+    <string name="task_review_code">Review code</string>
+    <string name="task_plan_week">Plan the next week</string>
+    <string name="task_clean_desk">Clean the desk</string>
+    <string name="task_meditate">Meditate</string>
+    <string name="task_reply_emails">Reply to emails</string>
+
+    <!-- Task Categories -->
+    <string name="category_shopping">Shopping</string>
+    <string name="category_work">Work</string>
+    <string name="category_health">Health</string>
+    <string name="category_personal">Personal</string>
+    <string name="category_leisure">Leisure</string>
+    <string name="category_productivity">Productivity</string>
+    <string name="category_chores">Chores</string>
+
+    <!-- Task Priorities -->
+    <string name="priority_high">High</string>
+    <string name="priority_medium">Medium</string>
+    <string name="priority_low">Low</string>
+</resources>
