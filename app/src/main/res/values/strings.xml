@@ -4,7 +4,7 @@
     <string name="app_name">LazyTasks</string>
 
     <!-- Screen Titles -->
-    <string name="task_list_title">My Task List</string>
+    <string name="task_list_title">Task List</string>
 
     <!-- Labels -->
     <string name="task_category_label">Task Category</string>
