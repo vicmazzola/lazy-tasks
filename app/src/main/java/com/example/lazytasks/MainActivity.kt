@@ -1,6 +1,5 @@
 package com.example.lazytasks
 
-import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -32,6 +31,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import java.time.format.DateTimeFormatter
@@ -60,6 +63,15 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TaskScreen() {
+
+    var categoryState by remember {
+        mutableStateOf("")
+    }
+
+    var listTaskByCategory by remember {
+        mutableStateOf(getTasksByCategory(categoryState))
+    }
+
     Column(
         modifier = Modifier.padding(40.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -71,25 +83,30 @@ fun TaskScreen() {
         )
         Spacer(modifier = Modifier.height(16.dp))
         OutlinedTextField(
-            value = "",
-            onValueChange = {},
+            value = categoryState,
+            onValueChange = {
+                categoryState = it
+            },
             modifier = Modifier.fillMaxWidth(),
             label = {
                 Text(text = stringResource(id = R.string.task_category_label))
             },
             trailingIcon = {
-                IconButton(onClick = {}) {
+                IconButton(onClick = {
+
+                    listTaskByCategory = getTasksByCategory(categoryState)
+
+                }) {
                     Icon(
                         painter = painterResource(id = R.drawable.search),
                         contentDescription = stringResource(id = R.string.search_icon_description)
                     )
                 }
-
             }
         )
         Spacer(modifier = Modifier.height(16.dp))
-        LazyColumn (){
-            items(getTasksByCategory("Work")) {
+        LazyColumn() {
+            items(listTaskByCategory) {
                 TaskCard(task = it)
             }
         }

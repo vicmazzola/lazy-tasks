@@ -81,6 +81,6 @@ fun getAllTasks(): List<Task> {
 
 fun getTasksByCategory(category: String): List<Task> {
     return getAllTasks().filter {
-        it.category.equals(category, ignoreCase = true)
+        it.category.startsWith(prefix = category, ignoreCase = true)
     }
 }
