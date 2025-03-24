@@ -24,4 +24,4 @@ A simple **task management app** built with **Jetpack Compose** and **Kotlin**.
 ## 🔧 Setup
 1. Clone this repo:
    ```sh
-   git clone https://github.com/yourusername/LazyTasks.git
+   git clone https://github.com/vicmazzola/LazyTasks.git
